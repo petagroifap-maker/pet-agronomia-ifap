@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100">
+
   <!-- Navbar -->
   <header class="bg-green-700 text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center p-4">
@@ -29,13 +30,49 @@
 
   <!-- Conteúdo da Página -->
   <main class="container mx-auto py-10">
-    <h2 class="text-3xl font-bold text-green-700 mb-4">Pesquisa</h2>
-    <p class="text-gray-700">Iniciativas de pesquisa que fortalecem a agricultura sustentável e o desenvolvimento regional.</p>
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Pesquisa</h2>
+    <p class="text-gray-700 mb-8">Projetos de pesquisa que fortalecem a agricultura sustentável e o desenvolvimento regional:</p>
+
+    <!-- Grid de Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Tratos culturais e manejo de culturas</h3>
+        <p class="text-gray-700">Avaliar melhores práticas agrícolas adaptadas à região (solo, irrigação, nutrição).</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Agroindústria e agregação de valor</h3>
+        <p class="text-gray-700">Pesquisar métodos de processamento, conservação e embalagem para produtos locais.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Comercialização e escoação</h3>
+        <p class="text-gray-700">Analisar alternativas de canais de venda, logística e cooperativismo.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Potencialidades de culturas regionais</h3>
+        <p class="text-gray-700">Identificar e analisar culturas promissoras para diversificação e aumento de renda.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Inovação tecnológica</h3>
+        <p class="text-gray-700">Testar pequenas tecnologias para produção e manejo sustentável (irrigação, sensores, ferramentas).</p>
+      </div>
+
+    </div>
   </main>
 
   <!-- Rodapé -->
   <footer class="bg-green-800 text-white text-center p-4 mt-10">
     <p>&copy; 2025 PET Agronomia IFAP - Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
