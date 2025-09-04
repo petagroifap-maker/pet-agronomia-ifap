@@ -7,35 +7,80 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100">
+
   <!-- Navbar -->
-  <header class="bg-green-700 text-white shadow-md">
+  <header class="bg-green-700 text-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold"><a href="index.html">PET Agronomia IFAP</a></h1>
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="sobre.html" class="hover:underline">Sobre</a></li>
-          <li><a href="ensino.html" class="hover:underline">Ensino</a></li>
-          <li><a href="pesquisa.html" class="hover:underline">Pesquisa</a></li>
-          <li><a href="extensao.html" class="hover:underline">Extensão</a></li>
-          <li><a href="membros.html" class="hover:underline">Membros</a></li>
-          <li><a href="atividades.html" class="hover:underline">Atividades</a></li>
-          <li><a href="noticias.html" class="hover:underline">Notícias</a></li>
-          <li><a href="contato.html" class="hover:underline">Contato</a></li>
+      <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:block">
+        <ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+          <li><a href="index.html" class="hover:underline transition">Home</a></li>
+          <li><a href="sobre.html" class="hover:underline transition">Sobre</a></li>
+          <li><a href="ensino.html" class="hover:underline transition">Ensino</a></li>
+          <li><a href="pesquisa.html" class="hover:underline transition">Pesquisa</a></li>
+          <li><a href="extensao.html" class="hover:underline transition">Extensão</a></li>
+          <li><a href="membros.html" class="hover:underline transition">Membros</a></li>
+          <li><a href="atividades.html" class="hover:underline transition">Atividades</a></li>
+          <li><a href="noticias.html" class="hover:underline transition">Notícias</a></li>
+          <li><a href="contato.html" class="hover:underline transition">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Conteúdo da Página -->
-  <main class="container mx-auto py-10">
-    <h2 class="text-3xl font-bold text-green-700 mb-4">Sobre</h2>
-    <p class="text-gray-700">O PET Agronomia IFAP tem como missão integrar ensino, pesquisa e extensão, formando profissionais comprometidos com a realidade amazônica.</p>
-  </main>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-green-600 text-white py-16 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Sobre o PET Agronomia IFAP</h2>
+      <p class="text-lg mb-6">Integrando ensino, pesquisa e extensão para formar profissionais comprometidos com a Amazônia.</p>
+    </div>
+  </section>
+
+  <!-- Missão, Visão e Valores -->
+  <section class="container mx-auto py-16">
+    <h3 class="text-3xl font-bold text-green-700 mb-12 text-center">Nossa Essência</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-bold mb-2">Missão</h4>
+        <p class="text-gray-700">Promover a integração entre ensino, pesquisa e extensão, formando profissionais capacitados e engajados com a realidade amazônica.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-bold mb-2">Visão</h4>
+        <p class="text-gray-700">Ser referência regional em educação, inovação e sustentabilidade no campo da agronomia.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-bold mb-2">Valores</h4>
+        <p class="text-gray-700">Compromisso, ética, sustentabilidade, inovação e valorização da comunidade.</p>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Rodapé -->
-  <footer class="bg-green-800 text-white text-center p-4 mt-10">
+  <footer class="bg-green-800 text-white text-center p-6">
     <p>&copy; 2025 PET Agronomia IFAP - Todos os direitos reservados.</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="#" class="hover:text-gray-300 transition">Facebook</a>
+      <a href="#" class="hover:text-gray-300 transition">Instagram</a>
+      <a href="#" class="hover:text-gray-300 transition">LinkedIn</a>
+    </div>
   </footer>
+
 </body>
 </html>
