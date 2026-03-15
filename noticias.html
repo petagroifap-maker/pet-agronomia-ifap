@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Configurações básicas da página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece na aba do navegador -->
   <title>Notícias & Eventos - PET Agronomia IFAP</title>
+
+  <!-- Importação do TailwindCSS (framework de estilo) -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-sans bg-gray-100">
 
-  <!-- Navbar -->
+  <!-- ================= NAVBAR (MENU DO SITE) ================= -->
+  <!-- sticky faz o menu ficar fixo no topo da página -->
   <header class="bg-green-700 text-white shadow-md sticky top-0 z-50">
+
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold"><a href="index.html">PET Agronomia IFAP</a></h1>
+
+      <!-- Nome do site / link para a página inicial -->
+      <h1 class="text-xl font-bold">
+        <a href="index.html">PET Agronomia IFAP</a>
+      </h1>
+
+      <!-- Botão do menu para celular -->
       <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/>
         </svg>
       </button>
+
+      <!-- Menu principal -->
       <nav id="menu" class="hidden md:block">
         <ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+
+          <!-- Links das páginas do site -->
           <li><a href="index.html" class="hover:underline transition">Home</a></li>
           <li><a href="sobre.html" class="hover:underline transition">Sobre</a></li>
           <li><a href="ensino.html" class="hover:underline transition">Ensino</a></li>
@@ -28,63 +46,176 @@
           <li><a href="atividades.html" class="hover:underline transition">Atividades</a></li>
           <li><a href="noticias.html" class="hover:underline transition">Notícias</a></li>
           <li><a href="contato.html" class="hover:underline transition">Contato</a></li>
+
         </ul>
       </nav>
+
     </div>
   </header>
 
+  <!-- ================= SCRIPT DO MENU MOBILE ================= -->
+  <!-- Esse script abre e fecha o menu quando clicar no botão -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
+
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
   </script>
 
-  <!-- Hero Section -->
+  <!-- ================= HERO (TÍTULO DA PÁGINA) ================= -->
   <section class="bg-green-600 text-white py-16 text-center">
+
     <div class="container mx-auto">
+
+      <!-- Título da página -->
       <h2 class="text-4xl font-bold mb-4">Notícias & Eventos</h2>
-      <p class="text-lg mb-6">Fique por dentro das últimas notícias e eventos do PET Agronomia IFAP.</p>
+
+      <!-- Pequena descrição -->
+      <p class="text-lg mb-6">
+        Fique por dentro das últimas notícias e eventos do PET Agronomia IFAP.
+      </p>
+
     </div>
+
   </section>
 
-  <!-- Notícias e Eventos -->
+  <!-- ================= SEÇÃO DE NOTÍCIAS ================= -->
   <section class="container mx-auto py-16">
-    <h3 class="text-3xl font-bold text-green-700 mb-12 text-center">Últimas Notícias</h3>
+
+    <!-- Título da seção -->
+    <h3 class="text-3xl font-bold text-green-700 mb-12 text-center">
+      Últimas Notícias
+    </h3>
+
+    <!-- GRID onde ficam os cards das notícias -->
     <div class="grid md:grid-cols-3 gap-8">
 
+
+      <!-- ================= NOTÍCIA NOVA ================= -->
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">Workshop de Agricultura Sustentável</h4>
-        <p class="text-gray-700 mb-4">Alunos e comunidade participaram de um workshop promovendo técnicas sustentáveis.</p>
-        <p class="text-gray-500 text-sm">Publicado em: 01/09/2025</p>
+
+        <!-- Título da notícia -->
+        <h4 class="text-xl font-bold mb-3">
+          PET Agronomia e GESP recepcionam calouros de Engenharia Agronômica 2026.1
+        </h4>
+
+        <!-- Texto da notícia -->
+        <p class="text-gray-700 mb-4">
+          O grupo PET Agronomia do Instituto Federal do Amapá (IFAP), em parceria
+          com o Grupo de Estudos em Solos e Plantas Cultivadas (GESP), participou
+          da recepção dos calouros de Engenharia Agronômica da turma 2026.1 durante
+          a Semana dos Calouros no Campus Agrícola Porto Grande.
+        </p>
+
+        <p class="text-gray-700 mb-4">
+          No dia 4 de março de 2026, após a aula inaugural e orientações sobre a
+          vida acadêmica, os estudantes ingressantes reuniram-se na biblioteca
+          para um encontro direcionado ao curso.
+        </p>
+
+        <p class="text-gray-700 mb-4">
+          A apresentação foi conduzida pelo coordenador do curso, tutor do PET e
+          líder do GESP, Dr. Nilvan Carvalho Melo, que destacou a importância do
+          comprometimento acadêmico e da participação em atividades de ensino,
+          pesquisa e extensão desde os primeiros semestres.
+        </p>
+
+        <p class="text-gray-700 mb-4">
+          Também foram apresentadas as atividades do GESP e do PET Agronomia,
+          destacando projetos, linhas de pesquisa e oportunidades para os novos
+          estudantes.
+        </p>
+
+        <!-- Data da publicação -->
+        <p class="text-gray-500 text-sm">
+          Publicado em: 04/03/2026
+        </p>
+
       </div>
 
+
+      <!-- ================= NOTÍCIA ANTIGA 1 ================= -->
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">Feira de Ciências no IFAP</h4>
-        <p class="text-gray-700 mb-4">O PET Agronomia IFAP apresentou projetos de ensino, pesquisa e extensão na feira.</p>
-        <p class="text-gray-500 text-sm">Publicado em: 15/08/2025</p>
+
+        <h4 class="text-xl font-bold mb-2">
+          Workshop de Agricultura Sustentável
+        </h4>
+
+        <p class="text-gray-700 mb-4">
+          Alunos e comunidade participaram de um workshop promovendo
+          técnicas sustentáveis para produção agrícola.
+        </p>
+
+        <p class="text-gray-500 text-sm">
+          Publicado em: 01/09/2025
+        </p>
+
       </div>
 
+
+      <!-- ================= NOTÍCIA ANTIGA 2 ================= -->
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-bold mb-2">Visita Técnica a Produtores Locais</h4>
-        <p class="text-gray-700 mb-4">Estudantes conheceram práticas agrícolas da região para aprendizado prático.</p>
-        <p class="text-gray-500 text-sm">Publicado em: 05/08/2025</p>
+
+        <h4 class="text-xl font-bold mb-2">
+          Feira de Ciências no IFAP
+        </h4>
+
+        <p class="text-gray-700 mb-4">
+          O PET Agronomia IFAP apresentou projetos de ensino,
+          pesquisa e extensão durante a feira de ciências do campus.
+        </p>
+
+        <p class="text-gray-500 text-sm">
+          Publicado em: 15/08/2025
+        </p>
+
+      </div>
+
+
+      <!-- ================= NOTÍCIA ANTIGA 3 ================= -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+
+        <h4 class="text-xl font-bold mb-2">
+          Visita Técnica a Produtores Locais
+        </h4>
+
+        <p class="text-gray-700 mb-4">
+          Estudantes realizaram visita técnica para conhecer
+          práticas agrícolas aplicadas na região.
+        </p>
+
+        <p class="text-gray-500 text-sm">
+          Publicado em: 05/08/2025
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- Rodapé -->
+
+  <!-- ================= RODAPÉ DO SITE ================= -->
   <footer class="bg-green-800 text-white text-center p-6">
+
     <p>&copy; 2025 PET Agronomia IFAP - Todos os direitos reservados.</p>
+
+    <!-- Links de redes sociais -->
     <div class="flex justify-center space-x-4 mt-2">
+
       <a href="#" class="hover:text-gray-300 transition">Facebook</a>
-      <a href="#" class="hover:text-gray-300 transition">Instagram</a>
+
+      <a href="https://www.instagram.com/petagroifap" class="hover:text-gray-300 transition">
+        Instagram
+      </a>
+
       <a href="#" class="hover:text-gray-300 transition">LinkedIn</a>
+
     </div>
+
   </footer>
 
 </body>
 </html>
-
